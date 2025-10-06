@@ -65,12 +65,12 @@
       animation: fadeIn 2s ease forwards;
     }
 
-    /* Sequential fade-in delays */
+    /* Sequential fade-in delays with blank line counted */
     p:nth-of-type(1)  { animation-delay: 1.5s; }
     p:nth-of-type(2)  { animation-delay: 3.5s; }
     p:nth-of-type(3)  { animation-delay: 5.5s; }
-    p:nth-of-type(4)  { animation-delay: 7.5s; }
-    p:nth-of-type(5)  { animation-delay: 9.5s; }
+    p:nth-of-type(4)  { animation-delay: 7.5s; }  /* blank line */
+    p:nth-of-type(5)  { animation-delay: 9.5s; }  /* Interested in something else? */
     p:nth-of-type(6)  { animation-delay: 11.5s; }
     p:nth-of-type(7)  { animation-delay: 13.5s; }
     p:nth-of-type(8)  { animation-delay: 15.5s; }
@@ -80,6 +80,7 @@
     p:nth-of-type(12) { animation-delay: 23.5s; }
     p:nth-of-type(13) { animation-delay: 25.5s; }
     p:nth-of-type(14) { animation-delay: 27.5s; }
+    p:nth-of-type(15) { animation-delay: 29.5s; } /* last line */
 
     a {
       color: #1c1c1e;
@@ -135,12 +136,15 @@
     <p>Interested in buying SneakerRotation.com?</p>
     <p>Email <a href="mailto:buy@sneakerrotation.com">Buy@SneakerRotation.com</a></p>
 
+    <!-- Extra empty space before the next block -->
+    <p>&nbsp;</p>
+
     <p>Interested in something else?</p>
     <p>When I was a young man, I wanted to change the world.</p>
-    <p>I found it was difficult to change the world, so I tried to change my country.</p>
-    <p>When I found I couldn’t change the country, I began to focus on my town.</p>
-    <p>I couldn’t change the town, and as an older man, I tried to change my family.</p>
-    <p>Now, as an old man, I realize the only thing I can change is myself.</p>
+    <p>It was difficult to change the world, so I tried to change my country.</p>
+    <p>I couldn’t change the country, so I tried to change my town.</p>
+    <p>I couldn’t change my town, so I tried to change my family.</p>
+    <p>Now as an old man I realize the only thing I can change is myself.</p>
     <p>Suddenly I realize that if long ago I had changed myself,</p>
     <p>I could have made an impact on my family.</p>
     <p>My family and I could have made an impact on our town.</p>
@@ -149,3 +153,4 @@
   </main>
 </body>
 </html>
+
