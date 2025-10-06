@@ -17,24 +17,35 @@
       font-family: 'Inter', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       color: #1c1c1e;
       text-align: center;
-      overflow: hidden;
       background: linear-gradient(135deg, #f5f5f7, #e8e8eb, #f5f5f7);
       background-size: 600% 600%;
       animation: gradientShift 20s ease infinite;
+      padding: 4rem 1rem;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-direction: column;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.5s;
     }
 
     header img {
       width: 240px;
       max-width: 80%;
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-      animation-delay: 0.5s;
+      height: auto;
+      object-fit: contain;
       transition: transform 0.3s ease, filter 0.3s ease;
+      background-color: transparent;
+      display: block;
     }
 
     header img:hover {
@@ -42,25 +53,45 @@
       filter: brightness(1.05);
     }
 
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1c1c1e;
+      margin-top: 1rem;
+      display: none;
+    }
+
     main {
-      max-width: 700px;
+      max-width: 800px;
       padding: 1rem 2rem;
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 400;
       color: #3a3a3c;
-      margin: 0.8rem 0;
+      margin: 1rem 0;
+      line-height: 1.6;
       opacity: 0;
       transform: translateY(20px);
       animation: fadeIn 2s ease forwards;
     }
 
-    /* Sequential fade-in delays */
-    p:nth-of-type(1) { animation-delay: 1.5s; }
-    p:nth-of-type(2) { animation-delay: 3.5s; }
-    p:nth-of-type(3) { animation-delay: 5.5s; }
+    /* Sequential fade-in delays (updated for all 14 lines) */
+    p:nth-of-type(1)  { animation-delay: 1.5s; }
+    p:nth-of-type(2)  { animation-delay: 3.5s; }
+    p:nth-of-type(3)  { animation-delay: 5.5s; }
+    p:nth-of-type(4)  { animation-delay: 7.5s; }
+    p:nth-of-type(5)  { animation-delay: 9.5s; }
+    p:nth-of-type(6)  { animation-delay: 11.5s; }
+    p:nth-of-type(7)  { animation-delay: 13.5s; }
+    p:nth-of-type(8)  { animation-delay: 15.5s; }
+    p:nth-of-type(9)  { animation-delay: 17.5s; }
+    p:nth-of-type(10) { animation-delay: 19.5s; }
+    p:nth-of-type(11) { animation-delay: 21.5s; }
+    p:nth-of-type(12) { animation-delay: 23.5s; }
+    p:nth-of-type(13) { animation-delay: 25.5s; }
+    p:nth-of-type(14) { animation-delay: 27.5s; }
 
     a {
       color: #1c1c1e;
@@ -89,21 +120,42 @@
         width: 180px;
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+      header h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="header.png" alt="Sneaker Rotation Logo">
+    <!-- Primary logo -->
+    <img src="./header.png" alt="Sneaker Rotation Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <!-- Fallback text header -->
+    <h1>Sneaker Rotation</h1>
   </header>
+
   <main>
     <p>Thank you for the memories!</p>
     <p>Interested in buying SneakerRotation.com?</p>
     <p>Email <a href="mailto:buy@sneakerrotation.com">Buy@SneakerRotation.com</a></p>
+
+    <p>Interested in something else?</p>
+    <p>When I was a young man, I wanted to change the world.</p>
+    <p>I found it was difficult to change the world, so I tried to change my country.</p>
+    <p>When I found I couldn’t change the country, I began to focus on my town.</p>
+    <p>I couldn’t change the town, and as an older man, I tried to change my family.</p>
+    <p>Now, as an old man, I realize the only thing I can change is myself.</p>
+    <p>Suddenly I realize that if long ago I had changed myself,</p>
+    <p>I could have made an impact on my family.</p>
+    <p>My family and I could have made an impact on our town.</p>
+    <p>Their impact could have changed the country,</p>
+    <p>and I could indeed have changed the world.</p>
   </main>
 </body>
 </html>
+
 
 
