@@ -19,32 +19,30 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      color: #1c1c1e;
+      justify-content: flex-start;
       text-align: center;
+      color: #1c1c1e;
       background: linear-gradient(135deg, #f5f5f7, #e8e8eb, #f5f5f7);
       background-size: 600% 600%;
       animation: gradientShift 20s ease infinite;
-      padding: 4rem 1rem;
     }
 
     header {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       margin-bottom: 2rem;
-      flex-direction: column;
+      padding-top: 10vh; /* add top spacing to visually center the logo */
       opacity: 0;
       animation: fadeIn 2s ease forwards;
       animation-delay: 0.5s;
     }
 
     header img {
-      width: 240px;
-      max-width: 80%;
+      width: clamp(240px, 30vw, 400px);
       height: auto;
       object-fit: contain;
       transition: transform 0.3s ease, filter 0.3s ease;
-      background-color: transparent;
       display: block;
     }
 
@@ -63,7 +61,7 @@
 
     main {
       max-width: 800px;
-      padding: 1rem 2rem;
+      padding: 0 2rem;
     }
 
     p {
@@ -77,7 +75,7 @@
       animation: fadeIn 2s ease forwards;
     }
 
-    /* Sequential fade-in delays (updated for all 14 lines) */
+    /* Sequential fade-in delays */
     p:nth-of-type(1)  { animation-delay: 1.5s; }
     p:nth-of-type(2)  { animation-delay: 3.5s; }
     p:nth-of-type(3)  { animation-delay: 5.5s; }
@@ -116,8 +114,11 @@
     }
 
     @media (max-width: 600px) {
+      header {
+        padding-top: 5vh; /* smaller top spacing on mobile */
+      }
       header img {
-        width: 180px;
+        width: clamp(180px, 50vw, 280px);
       }
       p {
         font-size: 1.1rem;
@@ -132,7 +133,8 @@
 <body>
   <header>
     <!-- Primary logo -->
-    <img src="./header.png" alt="Sneaker Rotation Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <img src="./header.png" alt="Sneaker Rotation Logo"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
     <!-- Fallback text header -->
     <h1>Sneaker Rotation</h1>
   </header>
